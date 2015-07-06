@@ -9,7 +9,7 @@
 
   %body.uk-height-1-1
     .uk-vertical-align.uk-text-center.uk-height-1-1
-      .uk-vertical-align-middle{style: "width: 400px"}
+      .uk-vertical-align-middle{style: "width: 400px; margin-top: 100px"}
         = form_for(resource, as: resource_name, url: session_path(resource_name), class: "uk-panel uk-panel-box uk-form") do |f|
           .uk-form-row
             = f.email_field :email, autofocus: true, class: "uk-width-1-1 uk-form-large"

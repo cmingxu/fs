@@ -1,2 +1,2 @@
-class Setting < SettingLogics
+class Setting < SettingsLogic
 end

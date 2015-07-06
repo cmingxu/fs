@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Agent:
+  = @event.agent_id
+%p
+  %b Title:
+  = @event.title
+%p
+  %b Begin time:
+  = @event.begin_time
+%p
+  %b End time:
+  = @event.end_time
+%p
+  %b Short description:
+  = @event.short_description
+%p
+  %b Description:
+  = @event.description
+
+= link_to 'Edit', edit_event_path(@event)
+\|
+= link_to 'Back', events_path

@@ -1,0 +1,34 @@
+= form_for @faculty do |f|
+  - if @faculty.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@faculty.errors.count, "error")} prohibited this faculty from being saved:"
+      %ul
+        - @faculty.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :gender
+    = f.text_field :gender
+  .field
+    = f.label :avatar
+    = f.text_field :avatar
+  .field
+    = f.label :teaching_age
+    = f.number_field :teaching_age
+  .field
+    = f.label :academic_level
+    = f.text_field :academic_level
+  .field
+    = f.label :school
+    = f.text_field :school
+  .field
+    = f.label :major
+    = f.text_field :major
+  .field
+    = f.label :self_assesment
+    = f.text_field :self_assesment
+  .actions
+    = f.submit 'Save'

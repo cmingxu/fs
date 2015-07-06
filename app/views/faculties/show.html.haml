@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @faculty.name
+%p
+  %b Gender:
+  = @faculty.gender
+%p
+  %b Avatar:
+  = @faculty.avatar
+%p
+  %b Teaching age:
+  = @faculty.teaching_age
+%p
+  %b Academic level:
+  = @faculty.academic_level
+%p
+  %b School:
+  = @faculty.school
+%p
+  %b Major:
+  = @faculty.major
+%p
+  %b Self assesment:
+  = @faculty.self_assesment
+
+= link_to 'Edit', edit_faculty_path(@faculty)
+\|
+= link_to 'Back', faculties_path

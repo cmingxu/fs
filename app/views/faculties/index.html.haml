@@ -1,0 +1,35 @@
+%h1 Listing faculties
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Gender
+      %th Avatar
+      %th Teaching age
+      %th Academic level
+      %th School
+      %th Major
+      %th Self assesment
+      %th
+      %th
+      %th
+
+  %tbody
+    - @faculties.each do |faculty|
+      %tr
+        %td= faculty.name
+        %td= faculty.gender
+        %td= faculty.avatar
+        %td= faculty.teaching_age
+        %td= faculty.academic_level
+        %td= faculty.school
+        %td= faculty.major
+        %td= faculty.self_assesment
+        %td= link_to 'Show', faculty
+        %td= link_to 'Edit', edit_faculty_path(faculty)
+        %td= link_to 'Destroy', faculty, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Faculty', new_faculty_path

@@ -1,0 +1,25 @@
+%h1 Listing stus
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Address
+      %th Syndrome
+      %th
+      %th
+      %th
+
+  %tbody
+    - @stus.each do |stu|
+      %tr
+        %td= stu.name
+        %td= stu.address
+        %td= stu.syndrome_id
+        %td= link_to 'Show', stu
+        %td= link_to 'Edit', edit_stu_path(stu)
+        %td= link_to 'Destroy', stu, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Stu', new_stu_path

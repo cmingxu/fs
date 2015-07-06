@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @syndrome.name
+%p
+  %b Description:
+  = @syndrome.description
+%p
+  %b Position:
+  = @syndrome.position
+
+= link_to 'Edit', edit_syndrome_path(@syndrome)
+\|
+= link_to 'Back', syndromes_path

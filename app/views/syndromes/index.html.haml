@@ -1,0 +1,25 @@
+%h1 Listing syndromes
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Position
+      %th
+      %th
+      %th
+
+  %tbody
+    - @syndromes.each do |syndrome|
+      %tr
+        %td= syndrome.name
+        %td= syndrome.description
+        %td= syndrome.position
+        %td= link_to 'Show', syndrome
+        %td= link_to 'Edit', edit_syndrome_path(syndrome)
+        %td= link_to 'Destroy', syndrome, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Syndrome', new_syndrome_path

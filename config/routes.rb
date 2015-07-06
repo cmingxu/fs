@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  resources :events
+
+  resources :courses
+
+  resources :zones
+
+  resources :faculties
+
+  resources :syndromes
+
+  resources :stus
+
+  resources :agents
+
   get 'welcome/index'
   namespace :dashboard do
     get '/' => "base#index"

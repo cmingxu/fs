@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @stu.name
+%p
+  %b Address:
+  = @stu.address
+%p
+  %b Syndrome:
+  = @stu.syndrome_id
+
+= link_to 'Edit', edit_stu_path(@stu)
+\|
+= link_to 'Back', stus_path
